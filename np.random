@@ -1,0 +1,18 @@
+# Example using the scikit-learn library and the isolation forest algorithm
+from sklearn.ensemble import IsolationForest
+import numpy as np
+
+# Generate random data
+X = np.random.rand(100, 2)
+
+# Create an isolation forest object
+isoforest = IsolationForest()
+
+# Perform anomaly detection
+isoforest.fit(X)
+
+# Predict the anomalies
+predictions = isoforest.predict(X)
+
+# Print the predicted anomalies
+print("Anomaly predictions:", predictions)
